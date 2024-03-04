@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>스크립트</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='../css/style.css' rel='stylesheet'>
+</head>
+<body>
+    <a class="btn" href="#none">보이기/감추기</a>
+    
+    <div>box</div>
+
+    <script src="../script/jquery-3.7.1.min.js"></script>
+    <script src="../code/script/custom.js"></script>    
+</body>
+</html>
+//css는 같으므로 생략
+
+$('div').css({'display':'none'})
+$('.btn').mouseenter(function(){
+    $('div').show()
+})
+$('.btn').mouseleave(function(){
+    $('div').hide()
+})
