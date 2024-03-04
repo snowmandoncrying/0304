@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>스크립트</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='../css/style.css' rel='stylesheet'>
+</head>
+<body>
+  <ul class="menu">
+    <li>
+        <a href="#none">Menu-1</a>
+        <div class="sub-menu">
+            <a href="#none">Sub-Menu1</a>
+            <a href="#none">Sub-Menu2</a>
+            <a href="#none">Sub-Menu3</a>
+            <a href="#none">Sub-Menu4</a>
+        </div>
+    </li>
+    <li>
+        <a href="#none">Menu-2</a>
+        <div class="sub-menu">
+            <a href="#none">Sub-Menu1</a>
+            <a href="#none">Sub-Menu2</a>
+            <a href="#none">Sub-Menu3</a>
+            <a href="#none">Sub-Menu4</a>
+        </div>
+    </li>
+  </ul>
+
+    <script src="../script/jquery-3.7.1.min.js"></script>
+    <script src="../code/script/custom.js"></script>    
+</body>
+</html>
+
+.menu{
+    padding: 0px;
+    list-style: none;
+    width: 200px;
+    text-align: center;
+}
+.menu li> a{
+    display: block;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border: 1px solid white;
+}
+.sub-menu{
+    border: 1px solid black;
+    display: none;
+}
+.sub-menu a{
+    display: block;
+}
+
+$('.menu li').mouseenter(function(){
+    $(this).children('.sub-menu').slideDown()
+})
+$('.menu li').mouseleave(function(){
+    $(this).children('.sub-menu').slideUp()
+})
+$('.menu li').mouseenter(function(){
+    $(this).children('.sub-menu').stop().slideDown()
+})
+$('.menu li').mouseenter(function(){
+    $(this).children('.sub-menu').stop().slideUp()
+})
+
+
+
