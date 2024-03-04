@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>스크립트</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='../css/style.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="btn">
+        <span>공지사항</span>
+        <span>갤러리</span>
+    </div>
+    <script src="../script/jquery-3.7.1.min.js"></script>
+    <script src="../code/script/custom.js"></script>    
+</body>
+</html>
+
+.btn{
+    width: 300px;
+}
+.btn span{
+    background-color: rgba(128, 128, 128, 0.5);
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius:10%;
+}
+.btn span.active{
+    background-color: whitesmoke;
+}
+
+$('.btn span').click(function(){
+    $(this).addClass('active')
+    $(this).siblings().removeClass('active')
+})
