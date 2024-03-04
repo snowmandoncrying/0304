@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>스크립트</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='../css/style.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="containner">
+    <a class="show-btn" href="#none">보이기</a>
+    <a class="hide-btn" href="#none">감추기</a>
+    <a class="toggle-btn" href="#none">토글</a>
+    <div>box</div>
+    </div>
+
+    <script src="../script/jquery-3.7.1.min.js"></script>
+    <script src="../code/script/custom.js"></script>    
+</body>
+</html>
+
+.containner{
+    width: 300px;
+}
+a{
+    background-color: rgba(128, 128, 128, 0.6);
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    width: 80px;
+    padding: 5px;
+}
+.containner div{
+    background-color: aqua;
+    width: 280px; height: 280px;
+    margin-top: 8px;
+    color: blue;
+    text-align: center;
+    line-height: 280px;
+}
+$('.show-btn').click(function(){
+    $('.containner div').show()
+})
+$('.hide-btn').click(function(){
+    $('.containner div').hide()
+})
+$('.toggle-btn').click(function(){
+    $('.containner div').toggle()
+})
+//다른 메서드
+$('.show-btn').click(function(){
+    $('.containner div').slideDown('slow')
+})
+$('.hide-btn').click(function(){
+    $('.containner div').slideUp('fast')
+})
+$('.toggle-btn').click(function(){
+    $('.containner div').slideToggle(3000)
+})
+//다른 메서드
+$('.show-btn').click(function(){
+    $('.containner div').fadeIn('slow')
+})
+$('.hide-btn').click(function(){
+    $('.containner div').fadeOut('fast')
+})
+$('.toggle-btn').click(function(){
+    $('.containner div').fadeToggle(3000)
+})
